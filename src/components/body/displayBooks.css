@@ -1,0 +1,6 @@
+.displayBook-cardContainer{
+    background-color:orange;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+}

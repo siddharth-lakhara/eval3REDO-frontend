@@ -1,0 +1,7 @@
+.bookcard-main {
+    background: white;
+    margin: 5px;
+    border: solid 1px black;
+    width: 100%;
+    flex-grow: 1;
+}
