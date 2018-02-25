@@ -7,21 +7,11 @@ import SideBar from './components/sidebar/sidebar';
 import RightPane from './components/rightPane';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      sync: 0,
-    };
-  }
-
   componentDidMount() {
     fetch('/read')
+      .then(response => response.json())
       .then((response) => {
-        console.log('response: ', response);
-        return response.json();
-      })
-      .then((response) => {
-        console.log('response JSON: ', response);
+        console.log(response);
         this.props.loadBooks(response);
       });
   }
@@ -41,7 +31,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  loadBooks: (newNoteStorage) => { dispatch(load(newNoteStorage)); },
+  loadBooks: (response) => { dispatch(load(response)); },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

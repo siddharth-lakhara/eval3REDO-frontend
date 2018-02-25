@@ -1,0 +1,21 @@
+.NoBooks-main {
+    background: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin : 100px;
+    font-size: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.NoBooks-main > div {
+    align-items: center;
+}
+
+.refresh-image {
+    height: 100px;
+    width: 100px;
+}

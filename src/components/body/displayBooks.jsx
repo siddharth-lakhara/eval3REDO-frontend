@@ -7,7 +7,7 @@ class DisplayBooks extends Component {
   render() {
     const bookObject = this.props.booksStorage;
     return Object.keys(bookObject).map(authorProp => (
-      <div>
+      <div className="displayBooks-main">
         <div className="displayBook-author">
             Author: {authorProp}
         </div>

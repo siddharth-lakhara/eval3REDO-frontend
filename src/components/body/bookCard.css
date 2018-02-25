@@ -1,7 +1,42 @@
 .bookcard-main {
     background: white;
-    margin: 5px;
+    margin: 25px;
     border: solid 1px black;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    justify-content: space-around;
+    align-content: space-around;
+    box-sizing: border-box;
+    border-radius: 25px;
+
+}
+
+.bookcard-main > * {
+    padding: 2px;
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+.bookCard-image {
+    height: 150px;
+    padding: 0px;
+    margin: 0;
     flex-grow: 1;
+    display:flex;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.bookCard-like-img{
+    height: 50px;
+    width: 50px;
+    margin-top: -12%;
+    margin-left: 68%;
+    border-radius: 50%;
+    background: grey;
+}
+
+.bookCard-author {
+    text-align: right;
 }

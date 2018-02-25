@@ -9,14 +9,17 @@ export const dislike = (author, booksId) => ({
   payload: { author, booksId },
 });
 
-export const load = newBooksStorage => ({
+export const load = newBookStorage => ({
   type: 'LOAD',
-  payload: newBooksStorage,
+  payload: newBookStorage,
 });
+
+export const save = () => ({ type: 'SAVE' });
 
 export default {
   like,
   dislike,
   load,
+  save,
 };
 

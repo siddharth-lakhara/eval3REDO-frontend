@@ -2,5 +2,17 @@
     background-color:orange;
     display: flex;
     flex-direction: row;
-    height: 300px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.displayBook-author {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: 100px;
+    height: 100px;
+    font-size: 200%;
+    margin-left: 50px;
 }
