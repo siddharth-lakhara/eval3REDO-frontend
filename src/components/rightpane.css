@@ -2,6 +2,6 @@
     flex: 1;
     flex-direction: column;
     display: flex;
-    margin-left: 5px;
     box-sizing: border-box;
+    overflow: auto;
 }

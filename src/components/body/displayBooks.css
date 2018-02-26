@@ -14,5 +14,7 @@
     text-align: 100px;
     height: 100px;
     font-size: 200%;
+    font-weight: lighter;
     margin-left: 50px;
+    padding-bottom: 1%;
 }

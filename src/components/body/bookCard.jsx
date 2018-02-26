@@ -34,11 +34,13 @@ class BookCard extends Component {
     console.log('BooksState: ', this.props.booksStorage);
     return (
       <div className="bookcard-main">
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/I/51VNlzbfpXL._SX331_BO1,204,203,200_.jpg"
-          alt="BookImage"
-          className="bookCard-image"
-        />
+        <div className="bookCard-image-container">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/51VNlzbfpXL._SX331_BO1,204,203,200_.jpg"
+            alt="BookImage"
+            className="bookCard-image"
+          />
+        </div>
         <i
           className="material-icons"
           style={{ background: this.state.color }}

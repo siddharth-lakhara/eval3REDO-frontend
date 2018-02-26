@@ -3,10 +3,24 @@
     color: white;
     padding: 10px;
     padding-bottom: 50px;
-    font-size: 250%;
     width: 36%;
     box-sizing: border-box;
-    text-decoration: underline;
-    text-decoration-color: lightcoral;
     flex-wrap: wrap;
+    font: "helvetica";
+}
+
+.header-book {
+    font-size: 255%;
+    font-weight: lighter;
+}
+
+.header-the, .header-shelf {
+    font-size: 180%;
+    font-weight: lighter;
+} 
+
+ 
+
+.header-hr {
+    border-color: lightcoral;
 }

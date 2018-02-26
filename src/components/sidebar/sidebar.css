@@ -4,7 +4,7 @@
     color: white;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     font-size: 250%;
     padding-left: 5px; 
     justify-content: space-between;
@@ -21,4 +21,9 @@
 
 .material-icons {
     font-size: 30px;
+}
+
+.sideBar-text {
+    text-align: center;
+    font-weight: bold;
 }
