@@ -33,7 +33,7 @@ const likeBook = (currentState, payload) => {
 };
 
 const dislikeBook = (currentState, payload) => {
-  const state = currentState;
+  const state = currentState.booksStorage;
   const bookId = payload.booksId;
   const { author } = payload;
   let bookToUpdate = {};
