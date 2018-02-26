@@ -11,7 +11,7 @@ class App extends Component {
     fetch('/read')
       .then(response => response.json())
       .then((response) => {
-        console.log(response);
+        console.log('response: ', response);
         this.props.loadBooks(response);
       });
   }

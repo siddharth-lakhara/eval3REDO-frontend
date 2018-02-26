@@ -41,7 +41,7 @@ const dislikeBook = (currentState, payload) => {
 
   for (let i = 0; i < state[author].length; i += 1) {
     if (state[author][i].books_id === bookId) {
-      bookToUpdate = state[i];
+      bookToUpdate = state[author][i];
       bookIndex = i;
       break;
     }
@@ -50,16 +50,8 @@ const dislikeBook = (currentState, payload) => {
   state[author][bookIndex] = bookToUpdate;
 
   return {
-    booksStorage: state,
+    booksStorage: { ...state },
   };
-};
-
-const saveState = (currentState) => {
-  fetch('/save', {
-    method: 'POST',
-    body: currentState.booksStorage,
-  })
-    .then(() => currentState);
 };
 
 const booksState = (state = defaultState, actions) => {
@@ -70,8 +62,6 @@ const booksState = (state = defaultState, actions) => {
       return (likeBook(state, actions.payload));
     case 'DISLIKE':
       return (dislikeBook(state, actions.payload));
-    case 'SAVE':
-      return (saveState(state));
     default:
       return state;
   }

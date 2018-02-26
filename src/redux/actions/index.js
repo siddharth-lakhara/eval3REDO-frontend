@@ -14,12 +14,9 @@ export const load = newBookStorage => ({
   payload: newBookStorage,
 });
 
-export const save = () => ({ type: 'SAVE' });
-
 export default {
   like,
   dislike,
   load,
-  save,
 };
 

@@ -1,11 +1,30 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { save } from '../../redux/actions';
 import './sidebar.css';
 
 class SideBar extends Component {
+  constructor(props) {
+    super(props);
+    this.save = this.save.bind(this);
+  }
+
   save() {
-    this.props.saveCurrentState();
+    const booksArray = this.props.booksStorage;
+    const booksToSend = [];
+    Object.keys(booksArray).map((authorArray) => {
+      Object.keys(booksArray[authorArray]).map((books) => {
+        console.log(booksArray[authorArray][books].books_id);
+        booksToSend.push({
+          booksId: booksArray[authorArray][books].books_id,
+          likes: booksArray[authorArray][books].like,
+        });
+      });
+    });
+
+    fetch('/save', {
+      method: 'POST',
+      body: JSON.stringify(booksToSend),
+    });
   }
 
   render() {
@@ -14,15 +33,17 @@ class SideBar extends Component {
         <div className="sideBar-text">
                 Bs
         </div>
-        <button className="sideBar-sync" onClick={this.save}>SYNC</button>
-        <i className="material-icons">refresh</i>
+        <div className="sidebar-settings">
+          <i className="material-icons" onClick={this.save}>refresh</i>
+          <i className="material-icons">settings</i>
+        </div>
       </div>
     );
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  saveCurrentState: () => { dispatch(save()); },
+const mapStateToProps = state => ({
+  booksStorage: state.booksState.booksStorage,
 });
 
-export default connect(null, mapDispatchToProps)(SideBar);
+export default connect(mapStateToProps, null)(SideBar);

@@ -2,17 +2,23 @@
     width: 150px;
     background-color: dimgray; 
     color: white;
+    display: flex;
     flex-direction: column;
+    height: 100%;
     font-size: 250%;
     padding-left: 5px; 
+    justify-content: space-between;
+    /* position: fixed; */
 }
 
-.sideBar-sync {
-    align-items: flex-end;
-}
-
-.material-icons-refresh {
-    width: 100px;
-    height: 100px;
+.sidebar-settings {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    position: relative;
+    right: 50%;
+}
+
+.material-icons {
+    font-size: 30px;
 }

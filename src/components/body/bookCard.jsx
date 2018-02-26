@@ -13,12 +13,19 @@ class BookCard extends Component {
   }
 
   likeFunction(event) {
-    const likeStatus = Number(event.target.value);
-    const [books_id, author] = event.target.id.split(',');
+    const [likes, books_id, author] = event.target.id.split(',');
+    const likeStatus = Number(likes);
+
     if (likeStatus) {
       this.props.dislikeFunction(author, Number(books_id));
+      this.setState({
+        color: 'grey',
+      });
     } else {
       this.props.likeFunction(author, Number(books_id));
+      this.setState({
+        color: 'red',
+      });
       console.log(this.props.booksStorage);
     }
   }
@@ -36,8 +43,7 @@ class BookCard extends Component {
           className="material-icons"
           style={{ background: this.state.color }}
           onClick={this.likeFunction}
-          id={`${this.props.bookId},${this.props.author}`}
-          value={this.props.like}
+          id={`${this.props.like},${this.props.bookId},${this.props.author}`}
         >favorite
         </i>
         <div className="bookCard-name">{this.props.Name}</div>
