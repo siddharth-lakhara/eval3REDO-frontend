@@ -32,16 +32,14 @@ class BookCard extends Component {
           alt="BookImage"
           className="bookCard-image"
         />
-        <img
-          src={require('./like_icon1.png')}
-          className="bookCard-like-img"
-          alt="like book"
-          onClick={this.likeFunction}
+        <i
+          className="material-icons"
           style={{ background: this.state.color }}
+          onClick={this.likeFunction}
           id={`${this.props.bookId},${this.props.author}`}
           value={this.props.like}
-        />
-
+        >favorite
+        </i>
         <div className="bookCard-name">{this.props.Name}</div>
         <div className="bookCard-rating">{this.props.rating}</div>
         <div className="bookCard-author">{this.props.author}</div>
@@ -60,3 +58,12 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookCard);
+{ /* <img
+  src={require('./like_icon1.png')}
+  className="bookCard-like-img"
+  alt="like book"
+  onClick={this.likeFunction}
+
+  id={`${this.props.bookId},${this.props.author}`}
+  value={this.props.like}
+/> */ }

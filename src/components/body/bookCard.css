@@ -4,11 +4,12 @@
     border: solid 1px black;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 250px;
     justify-content: space-around;
     align-content: space-around;
     box-sizing: border-box;
     border-radius: 25px;
+    font: helvetica;
 
 }
 
@@ -28,15 +29,27 @@
     border-top-right-radius: 25px;
 }
 
-.bookCard-like-img{
+.material-icons{
     height: 50px;
     width: 50px;
     margin-top: -12%;
+    text-align: center;
+    padding: 10px;
     margin-left: 68%;
     border-radius: 50%;
-    background: grey;
 }
 
 .bookCard-author {
     text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.bookCard-rating {
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.bookCard-name {
+    font-weight: bold;
 }

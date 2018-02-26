@@ -9,7 +9,7 @@ class DisplayBooks extends Component {
     return Object.keys(bookObject).map(authorProp => (
       <div className="displayBooks-main">
         <div className="displayBook-author">
-            Author: {authorProp}
+          {authorProp}
         </div>
         <div className="displayBook-cardContainer">
           <AuthorCard

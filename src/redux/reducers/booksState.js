@@ -28,7 +28,7 @@ const likeBook = (currentState, payload) => {
   bookToUpdate.like = 1;
   state[author][bookIndex] = bookToUpdate;
   return Object.assign({}, state, {
-    booksStorage: state,
+    booksStorage: { ...state },
   });
 };
 
