@@ -41,13 +41,15 @@ class BookCard extends Component {
             className="bookCard-image"
           />
         </div>
-        <i
-          className="material-icons"
-          style={{ background: this.state.color }}
-          onClick={this.likeFunction}
-          id={`${this.props.like},${this.props.bookId},${this.props.author}`}
-        >favorite
-        </i>
+        <div className="like-icon">
+          <i
+            className="material-icons"
+            style={{ background: this.state.color }}
+            onClick={this.likeFunction}
+            id={`${this.props.like},${this.props.bookId},${this.props.author}`}
+          >favorite
+          </i>
+        </div>
         <div className="bookCard-name">{this.props.Name}</div>
         <div className="bookCard-rating">{this.props.rating}</div>
         <div className="bookCard-author">{this.props.author}</div>

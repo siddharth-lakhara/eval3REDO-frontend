@@ -12,6 +12,7 @@
     border-radius: 25px;
     font: helvetica;
     padding:0;
+    box-shadow: 0px 0px 2px 0px black;
 
 }
 
@@ -35,14 +36,19 @@
     /* background-size: cover; */
 }
 
-.material-icons{
+.like-icon {
+    box-shadow: 2px 2px 5px orange;
     height: 50px;
     width: 50px;
     margin-top: -12%;
-    text-align: center;
-    padding: 10px;
     margin-left: 68%;
     border-radius: 50%;
+}
+
+.material-icons{
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px;
     color: white;
 }
 
