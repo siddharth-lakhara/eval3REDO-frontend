@@ -8,5 +8,11 @@
 }
 
 .sideBar-sync {
-    align-content: flex-end;
+    align-items: flex-end;
+}
+
+.material-icons-refresh {
+    width: 100px;
+    height: 100px;
+    text-align: center;
 }

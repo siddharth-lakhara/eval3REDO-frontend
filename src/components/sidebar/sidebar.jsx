@@ -15,6 +15,7 @@ class SideBar extends Component {
                 Bs
         </div>
         <button className="sideBar-sync" onClick={this.save}>SYNC</button>
+        <i className="material-icons">refresh</i>
       </div>
     );
   }
