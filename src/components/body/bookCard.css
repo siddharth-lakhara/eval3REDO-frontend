@@ -1,12 +1,10 @@
 .bookcard-main {
     background: white;
     margin: 25px;
-    border: solid 1px black;
     display: flex;
     flex-direction: column;
     width: 250px;
     height: 400px;
-    /* justify-content: space-around; */
     align-content: space-around;
     box-sizing: border-box;
     border-radius: 25px;

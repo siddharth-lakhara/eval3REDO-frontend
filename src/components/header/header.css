@@ -1,26 +1,25 @@
 .header-main {
-    background: darkred;
+    background: #944744;
     color: white;
     padding: 10px;
-    padding-bottom: 50px;
-    width: 36%;
+    width: 28%;
     box-sizing: border-box;
     flex-wrap: wrap;
     font: "helvetica";
+    border-bottom-right-radius: 20px;
+    text-align: center;
 }
 
 .header-book {
     font-size: 255%;
-    font-weight: lighter;
 }
 
 .header-the, .header-shelf {
     font-size: 180%;
-    font-weight: lighter;
-} 
-
- 
+}
 
 .header-hr {
-    border-color: lightcoral;
+    border-color: #BF9392;
+    size: "400";
+    width: 80%;
 }
